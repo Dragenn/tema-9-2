@@ -1,0 +1,90 @@
+public class Persona2 {
+    private String nombre;
+    private String direccion;
+    private String telefono;
+    
+    
+    
+
+    public Persona2(String nombre, String direccion, String telefono) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+
+    
+}
+
+
+
+
+public class Trabajador extends Persona {
+    private double credito;
+    private double salario;
+
+    public Trabajador(String nombre, String direccion, String telefono, double credito, double salario) {
+        super(nombre, direccion, telefono);
+        this.credito = credito;
+        this.salario = salario;
+    }
+
+    public double getCredito() {
+        return credito;
+    }
+
+    public void setCredito(double credito) {
+        this.credito = credito;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+
+    
+
+
+    
+
+    public static void main(String[] args) {
+        Trabajador trabajador = new Trabajador("Hernando Vichini", "Calle 133", "555-3344", 1023.0,235);
+        System.out.println("Nombre: " + trabajador.getNombre());
+        System.out.println("Dirección: " + trabajador.getDireccion());
+        System.out.println("Teléfono: " + trabajador.getTelefono());
+        System.out.println("Crédito: " + trabajador.getCredito());
+        System.out.println("Salario: $ " + trabajador.getSalario());
+    }
+
+  
+}
+
+
